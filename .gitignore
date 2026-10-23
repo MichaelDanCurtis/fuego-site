@@ -1,4 +1,4 @@
 .vercel/
 .DS_Store
-evidence/*.png
+evidence/
 node_modules/

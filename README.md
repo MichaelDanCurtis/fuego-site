@@ -24,3 +24,13 @@ python3 -m http.server 4183 --bind 127.0.0.1 --directory dist
 ```
 
 Only `dist/` is public. Source, validation and deployment evidence are private. Hosting uses an independent Vercel project and a Cloudflare DNS-only CNAME for `fuego`; it does not change the Fuego application or NeroNook deployment.
+
+## Production
+
+- Public URL: https://fuego.ailuxis.com/
+- Private source: https://github.com/MichaelDanCurtis/fuego-site
+- Vercel project: `fuego-site` (`prj_6qmCrRchywHQ7tUSGRA6Opw3lqin`), in Michael Curtis' projects.
+- Production branch: `main`; pushes deploy automatically. The build runs the site check before serving `dist/`.
+- Cloudflare record: DNS-only `CNAME fuego → cname.vercel-dns.com`, TTL Auto.
+- Initial publication: 2026-10-23, source `706ed3277932c25b24ba8411640722df41df710a`.
+- Verified public HTTPS, exact bytes for all 11 public files, custom 404, deployed security headers, desktop/mobile layouts, menu, keyboard-accessible demo, FAQ, and privacy navigation. Screenshots and detailed checks are retained locally in `evidence/`.
