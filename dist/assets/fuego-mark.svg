@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="fuego-title">
+  <title id="fuego-title">Fuego</title>
+  <defs>
+    <linearGradient id="fuego-ember" x1="42" y1="12" x2="88" y2="122" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7AC61"/>
+      <stop offset="0.52" stop-color="#F56B3B"/>
+      <stop offset="1" stop-color="#C85A36"/>
+    </linearGradient>
+    <linearGradient id="fuego-core" x1="61" y1="75" x2="76" y2="115" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE8B5"/>
+      <stop offset="1" stop-color="#F1A277"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#fuego-ember)" d="M67 9C73 34 51 41 51 62C51 73 61 78 69 69C73 64 73 55 71 48C94 62 105 80 101 96C96 112 82 121 65 121C42 121 25 106 25 84C25 65 35 50 45 39C42 55 42 67 49 70C45 47 62 33 67 9Z"/>
+  <path fill="url(#fuego-core)" d="M68 75C75 86 85 89 83 99C83 108 75 114 67 114C58 114 51 108 51 99C51 90 59 79 65 73C63 83 65 86 68 88C70 84 69 79 68 75Z"/>
+</svg>
