@@ -1,0 +1,24 @@
+/* The composition is fixed; all product content stays in normal document flow. */
+body { isolation: isolate; }
+.ambient { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; background: radial-gradient(ellipse at 83% 38%, #60311d55, transparent 58%), radial-gradient(ellipse at 60% 110%, #8c3a202c, transparent 62%), #171410; }
+.ambient::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #1714108c, transparent 58%), linear-gradient(180deg, #17141050, transparent 23%, transparent 76%, #17141030); }
+#ember-field { display: block; width: 100%; height: 100%; opacity: 0; transition: opacity 1.8s ease; }
+.ambient.is-ready #ember-field { opacity: 1; }
+.hero-visual { background: #211a1375; box-shadow: 0 26px 90px #0c080829, inset 0 1px #f9c68b08; border-color: #e5b98f25; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+.map-node { background: #211c17e8; }
+.nav-cta { background: #17141045; }
+.workflow-section { background: #f2eee5f5; }
+.nook-section { background: #e8e3d7f5; }
+.preview-section { background: #1c1712ac; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.motion-toggle { position: fixed; z-index: 12; right: 22px; bottom: 22px; display: inline-flex; align-items: center; gap: 9px; min-height: 39px; padding: 9px 13px; border: 1px solid #e4b58533; border-radius: 30px; background: #211b16e8; color: #d7bfa5; box-shadow: 0 4px 24px #00000018; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); font-size: 9px; letter-spacing: .025em; transition: background .2s, border-color .2s; }
+.motion-toggle:hover { background: #35271c; border-color: #e4b58577; }
+.motion-symbol { width: 9px; height: 10px; border-left: 2px solid currentColor; border-right: 2px solid currentColor; }
+.motion-toggle[aria-pressed="true"] .motion-symbol { width: 0; height: 0; border: 5px solid transparent; border-left: 7px solid currentColor; border-right: 0; }
+body[data-motion="paused"] .connection-lines path { animation-play-state: paused; }
+@media (max-width: 650px) {
+  .ambient::after { background: linear-gradient(90deg, #171410a0, #17141020), linear-gradient(180deg, #17141033, transparent 65%); }
+  .hero-visual { backdrop-filter: none; -webkit-backdrop-filter: none; background: #211a13c4; }
+  .motion-toggle { right: 12px; bottom: 12px; min-height: 40px; padding: 10px 12px; font-size: 8px; }
+  .site-footer { padding-bottom: 75px; }
+}
+@media (prefers-reduced-motion: reduce) { #ember-field { transition: none; } }

@@ -12,6 +12,14 @@ Independent static marketing site for https://fuego.ailuxis.com/.
 - Privacy: no custom analytics, tracking, form collection or external fonts. Hosting may process request logs.
 - Acceptance: responsive desktop/mobile, keyboard-operable demo and navigation, reduced-motion support, valid local links/assets, metadata, public HTTPS on the exact requested domain.
 
+## Ambient motion brief
+
+- Replace the flat homepage background with a locally rendered WebGL field: sculpted ember ribbons, luminous fine edges, and a cursor-driven wake.
+- Pointer movement bends the field; scroll position changes its composition. Keep foreground layout stable and text legible.
+- No external runtime, texture downloads, tracking, or new network requests. One full-screen draw call with a bounded backing buffer and lower mobile frame rate.
+- Respect reduced motion, offer a keyboard-accessible pause control, stop rendering in hidden tabs, and restore gracefully after context loss. A static CSS composition remains available without WebGL or JavaScript.
+- Verify actual shader rendering, pointer/scroll response, pause/resume, reduced motion, mobile layout, context recovery, and unchanged product controls before publishing.
+
 ## Content grounding
 
 Reviewed 2026-10-23 against `../../README.md`, `../../docs/specs/README.md`, `../../native/nook-agent/README.md`, and the current NeroNook public site. Distinguish product direction from scoped development evidence. Demo content is synthetic and never executes work or connects accounts.

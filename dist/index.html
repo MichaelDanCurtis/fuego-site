@@ -18,9 +18,13 @@
   <link rel="icon" href="/assets/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/ambient.css">
   <script src="/site.js" defer></script>
+  <script src="/ambient.js" defer></script>
 </head>
 <body>
+  <div class="ambient" aria-hidden="true"><canvas id="ember-field"></canvas></div>
+  <button class="motion-toggle" type="button" aria-label="Pause background motion" aria-pressed="false" hidden><span class="motion-symbol" aria-hidden="true"></span><span class="motion-label">Pause motion</span></button>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header wrap">
     <a class="wordmark" href="/" aria-label="Fuego home"><img src="/assets/fuego-mark.svg" width="34" height="38" alt="">Fuego<span class="brand-rule"></span><span class="brand-by">by Ailuxis</span></a>
