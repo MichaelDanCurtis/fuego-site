@@ -1,0 +1,80 @@
+.app-section { padding: 0 0 112px; }
+.app-heading { display: flex; align-items: end; justify-content: space-between; gap: 48px; margin-bottom: 35px; }
+.app-heading h2 { margin-top: 21px; }
+.app-heading > p { color: var(--muted); max-width: 345px; font-size: 13px; line-height: 1.9; padding-bottom: 4px; }
+.app-gallery { background: #1c1713ee; border: 1px solid #b4875645; border-radius: 9px; overflow: hidden; box-shadow: 0 35px 80px -50px #000; }
+.gallery-tabs { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--line); }
+.gallery-tabs button { display: flex; align-items: center; gap: 16px; padding: 22px 28px; background: transparent; text-align: left; border-bottom: 2px solid transparent; color: var(--muted); }
+.gallery-tabs button + button { border-left: 1px solid var(--line); }
+.gallery-tabs button:hover { background: #f3915c08; }
+.gallery-tabs button[aria-selected="true"] { background: #f3915c0b; border-bottom-color: var(--ember); color: var(--text); }
+.gallery-tabs button:focus-visible { outline-offset: -6px; }
+.capture-number { font-size: 9px; color: var(--ember); letter-spacing: .08em; }
+.gallery-tabs strong { display: block; font-size: 14px; font-weight: 500; }
+.gallery-tabs small { display: block; font-size: 10px; margin-top: 3px; color: var(--faint); }
+.capture-arrow { font-size: 17px; margin-left: auto; color: var(--ember); opacity: .3; }
+.gallery-tabs button[aria-selected="true"] .capture-arrow { opacity: 1; }
+.gallery-panel + .gallery-panel { border-top: 1px solid var(--line); }
+.gallery-panel[role="tabpanel"] { border-top: 0; }
+.capture-frame { display: grid; place-items: center; position: relative; aspect-ratio: 1440 / 740; margin: 24px; border: 1px solid #ffffff14; border-radius: 5px; overflow: hidden; background: #15120e; cursor: zoom-in; }
+.capture-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.capture-frame-voice { background: radial-gradient(ellipse at 50% 100%, #6b3c241f, transparent 70%), #15120e; }
+.capture-enlarge { display: flex; align-items: center; gap: 20px; position: absolute; bottom: 14px; right: 14px; padding: 8px 12px; border: 1px solid #b4875655; border-radius: 4px; background: #211b14ed; color: var(--ember-light); font-size: 10px; opacity: 0; transform: translateY(4px); transition: opacity .2s, transform .2s; }
+.capture-frame:hover .capture-enlarge, .capture-frame:focus-visible .capture-enlarge { opacity: 1; transform: none; }
+.gallery-panel figcaption { padding: 0 28px 25px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.gallery-panel h3 { font-size: 17px; font-weight: 450; letter-spacing: -.02em; }
+.gallery-panel figcaption p { font-size: 11px; line-height: 1.8; color: var(--muted); margin-top: 5px; max-width: 600px; }
+.capture-surface { color: var(--ember-light); font-size: 9px; white-space: nowrap; }
+.capture-note { font-size: 9px; color: var(--faint); text-align: center; margin: 19px auto 0; line-height: 1.8; }
+.gallery-next { margin-top: 24px; }
+.capture-dialog { width: min(1540px, calc(100% - 48px)); max-width: none; max-height: calc(100dvh - 48px); padding: 0; border: 1px solid #a578515f; border-radius: 9px; background: #171410; color: var(--text); box-shadow: 0 30px 100px #000a; }
+.capture-dialog::backdrop { background: #080603e8; backdrop-filter: blur(12px); }
+.capture-dialog-bar { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 22px; border-bottom: 1px solid var(--line); }
+.capture-dialog-bar h2 { font: 500 16px/1.4 var(--sans); letter-spacing: -.02em; }
+.capture-dialog-bar > div { display: flex; gap: 9px; }
+.capture-dialog-bar button { background: #30251c; border: 1px solid #b4875655; border-radius: 4px; padding: 8px 14px; font-size: 11px; white-space: nowrap; }
+.capture-dialog-bar button:hover { background: #443020; }
+.capture-close { color: var(--ember-light); }
+.capture-close span { margin-left: 12px; }
+.capture-dialog-scroll { overflow: auto; max-height: calc(100dvh - 210px); overscroll-behavior: contain; padding: 12px; }
+.capture-dialog-scroll img { width: auto; max-width: 100%; max-height: calc(100dvh - 234px); margin: auto; object-fit: contain; }
+.capture-dialog.is-zoomed .capture-dialog-scroll img { max-width: none; max-height: none; }
+.capture-dialog > p { font-size: 10px; color: var(--muted); padding: 12px 22px 16px; line-height: 1.7; border-top: 1px solid var(--line); }
+html.capture-is-open { overflow: hidden; }
+@media (hover: none) { .capture-enlarge { opacity: 1; transform: none; } }
+@media (max-width: 900px) {
+  .app-section { padding-bottom: 85px; }
+  .app-heading { gap: 30px; }
+  .app-heading > p { max-width: 290px; font-size: 12px; }
+  .gallery-tabs button { padding: 18px; gap: 12px; }
+  .gallery-tabs strong { font-size: 12px; }
+  .gallery-tabs small { font-size: 9px; }
+  .capture-frame { margin: 18px; }
+  .gallery-panel figcaption { padding: 0 20px 22px; }
+  .capture-surface { display: none; }
+}
+@media (max-width: 650px) {
+  .app-section { padding-bottom: 65px; }
+  .app-heading { display: block; margin-bottom: 26px; }
+  .app-heading > p { margin-top: 21px; max-width: 335px; }
+  .gallery-tabs button { display: block; padding: 13px 6px; text-align: center; }
+  .capture-number { display: block; font-size: 7px; margin-bottom: 4px; }
+  .gallery-tabs strong { font-size: 10px; }
+  .gallery-tabs small { font-size: 7px; margin-top: 2px; }
+  .capture-arrow { display: none; }
+  .capture-frame { margin: 12px; aspect-ratio: 4 / 3; }
+  .capture-frame-voice img { width: 100%; }
+  .capture-enlarge { opacity: 1; transform: none; font-size: 8px; bottom: 8px; right: 8px; padding: 6px 8px; gap: 12px; }
+  .gallery-panel figcaption { padding: 2px 16px 19px; }
+  .gallery-panel h3 { font-size: 15px; }
+  .gallery-panel figcaption p { font-size: 10px; min-height: 54px; }
+  .capture-note { font-size: 8px; max-width: 300px; }
+  .gallery-next { margin-top: 21px; }
+  .capture-dialog { width: calc(100% - 20px); max-height: calc(100dvh - 20px); }
+  .capture-dialog-bar { align-items: start; padding: 14px; gap: 12px; flex-direction: column; }
+  .capture-dialog-bar h2 { font-size: 14px; }
+  .capture-dialog-bar > div { justify-content: space-between; width: 100%; }
+  .capture-dialog-bar button { min-height: 40px; }
+  .capture-dialog-scroll { padding: 8px; }
+  .capture-dialog > p { font-size: 9px; padding: 12px 14px; }
+}

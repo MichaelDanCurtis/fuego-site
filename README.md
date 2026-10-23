@@ -8,7 +8,7 @@ Independent static marketing site for https://fuego.ailuxis.com/.
 - Message: give work a home, keep execution visible, retain human control. Fuego owns work and execution; NeroNook is an optional everyday Mac surface; Ember is the conversational assistant.
 - Visual direction: existing Fuego flame, obsidian and warm ember colors, generous editorial typography, a light paper section connecting to the NeroNook brand.
 - Status: active development. No general-availability, universal provider/platform support, security certification, price, performance or customer claims.
-- Main action: explore an interactive, explicitly illustrative workflow. Secondary action: visit the existing NeroNook site. No invented signup/contact destination or download.
+- Main action: inspect real app screenshots, with an interactive, explicitly illustrative workflow available next. The existing NeroNook site remains linked. No invented signup/contact destination or download.
 - Privacy: no custom analytics, tracking, form collection or external fonts. Hosting may process request logs.
 - Acceptance: responsive desktop/mobile, keyboard-operable demo and navigation, reduced-motion support, valid local links/assets, metadata, public HTTPS on the exact requested domain.
 
@@ -19,6 +19,14 @@ Independent static marketing site for https://fuego.ailuxis.com/.
 - No external runtime, texture downloads, tracking, or new network requests. One full-screen draw call with a bounded backing buffer and lower mobile frame rate.
 - Respect reduced motion, offer a keyboard-accessible pause control, stop rendering in hidden tabs, and restore gracefully after context loss. A static CSS composition remains available without WebGL or JavaScript.
 - Verify actual shader rendering, pointer/scroll response, pause/resume, reduced motion, mobile layout, context recovery, and unchanged product controls before publishing.
+
+## App screenshot gallery
+
+- Three original UI captures taken on 2026-10-23: the agent workspace, connected computer controls, and native macOS Ember Voice Studio.
+- Web workspace captures show the existing development qualification organization. Crops omit account identity, browser URLs, private conversations, and infrastructure details. The native capture contains only the Voice Studio sheet. No UI text or data was fabricated or retouched.
+- Public images live in `dist/assets/screenshots/`. Keep captures distinct from the existing illustrative workflow and Nook concept.
+- `#app` provides keyboard-accessible tabs, an accessible image dialog with actual-size inspection, and ordinary image links when JavaScript is unavailable. All three figures remain readable without JavaScript.
+- Acceptance: inspect every public image, verify all three views and dialog keyboard behavior, check desktop and mobile layout, then verify the deployed image bytes over HTTPS.
 
 ## Content grounding
 
